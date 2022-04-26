@@ -70,7 +70,29 @@ const tabs = document.querySelectorAll('[data-target]'),
 })   
 
 /*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll('.services__modal'),
+    modalBtns   = document.querySelectorAll('.services__button'),
+    modalBtnsCloses = document.querySelectorAll('.services__modal-close')
 
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((btn, i) =>{
+    btn.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalBtnsCloses.forEach((btn, i) =>{
+    btn.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+        
+            modalView.classList.remove('active-modal')
+            
+        })
+    })
+})
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 
