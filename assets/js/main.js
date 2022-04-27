@@ -95,7 +95,18 @@ modalBtnsCloses.forEach((btn, i) =>{
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-
+let swiper = new Swiper('.portofolio__container', {
+    cssMode: true,
+    loop :true,
+    navigaiton: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});    
 
 /*==================== TESTIMONIAL ====================*/
 
