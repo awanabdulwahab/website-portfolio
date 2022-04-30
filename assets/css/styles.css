@@ -823,6 +823,11 @@ img {
   color: var(--first-color);
 }
 
+.swiper-container .swiper-pagination-testimonial {
+  bottom: 0;
+
+}
+
 /*==================== CONTACT ME ====================*/
 
 
