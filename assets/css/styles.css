@@ -1222,6 +1222,10 @@ img {
     font-size: 2rem;
   }
 
+  .portfolio__data {
+    align-items: center;
+  }
+
   .services__content {
     padding: 6rem 0 2rem 2.5rem;
   }
@@ -1278,7 +1282,95 @@ img {
   .footer__copy {
     margin-top: 4.5rem;
   }
+
 }
 
-
 /* For large devices */
+@media screen and (min-width:1024px) {
+
+  .header,
+  .main,
+  .footer__container {
+    padding: 0;
+  }
+
+  .home__blob {
+    width: 320px;
+  }
+
+  .home__social {
+    transform: translateX(-6rem);
+  }
+
+  .services__container {
+    grid-template-columns: repeat(3, 238px);
+  }
+
+  .portfolio__content {
+    column-gap: 5rem;
+  }
+
+  .contact__form {
+    width: 460px;
+  }
+}
+
+.color__switcher {
+  position: fixed;
+  top: 25px;
+  right: -200px;
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.color__switcher.active {
+  right: 0;
+}
+
+.color__switcher h3 {
+  color: var(--first-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--first-color);
+  padding: 5px 0;
+  text-align: center;
+}
+
+.color__switcher i {
+  color: var(--first-color);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.color__switcher .switcher__button {
+  position: absolute;
+  top: 0;
+  left: -75px;
+  color: var(--first-color);
+  background: var(--body-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.color__switcher .theme-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color__switcher .theme-buttons-container .theme-buttons {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}

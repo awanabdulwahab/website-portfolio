@@ -192,3 +192,19 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+// ColorChange
+
+document.querySelector('.switcher__button').onclick = () => {
+    document.querySelector('.color__switcher').classList.toggle('active');
+}
+
+let themeButtons = document.querySelectorAll('.theme-buttons');
+
+themeButtons.forEach(color=> {
+    color.addEventListener('click', () => {
+        let datacolor = color.getAttribute('data-color');
+        document.documentElement.style.setProperty('--hue-color', datacolor);
+    })
+});
